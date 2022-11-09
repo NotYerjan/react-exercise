@@ -1,9 +1,9 @@
 function App() {
-  const name = "Yerjan";
+  const sum = (a, b) => a + b;
 
   return (
     <div className="App">
-      <h1>Hello, {name}!</h1>
+      <h2>{sum(4, 5)}</h2>
     </div>
   );
 }
