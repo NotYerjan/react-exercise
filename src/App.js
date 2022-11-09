@@ -1,9 +1,10 @@
 import React from "react";
+import Hello from "./Hello";
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello, World!</h1>
+        <Hello></Hello>
       </div>
     );
   }
