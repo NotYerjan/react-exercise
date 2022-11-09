@@ -1,9 +1,9 @@
 function App() {
-  const hello = "Hello, World!";
+  const name = "Yerjan";
 
   return (
     <div className="App">
-      <h1>{hello}</h1>
+      <h1>Hello, {name}!</h1>
     </div>
   );
 }
