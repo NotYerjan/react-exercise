@@ -5,10 +5,10 @@ export default class Counter extends Component {
   state = {
     count: this.props.count,
   };
-  constructor(props) {
+  componentDidMount(props) {
     super(props);
-
     setInterval(() => {
+      console.log(this.state.count);
       this.setState((state) => {
         return { count: state.count + this.props.increment };
       });
