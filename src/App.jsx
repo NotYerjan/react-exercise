@@ -1,9 +1,8 @@
-import Counter from "./Counter";
+import ClickCounter from "./ClickCounter";
 function App() {
   return (
     <>
-      <Counter />
-      <Counter count={10} increment={3} interval={4000} />
+      <ClickCounter />
     </>
   );
 }
