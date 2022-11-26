@@ -27,7 +27,12 @@ export default function UncontrolledLogin() {
       <h1>Login</h1>
       <form onSubmit={(e) => onUncontrolledLogin(e)}>
         <label htmlFor="username-uncontrolled">Username</label>
-        <input id="username-uncontrolled" type="text" ref={username} />
+        <input
+          id="username-uncontrolled"
+          type="text"
+          ref={username}
+          autoFocus
+        />
         <br />
         <label htmlFor="password-uncontrolled">Password</label>
         <input id="password-uncontrolled" type="password" ref={password} />
