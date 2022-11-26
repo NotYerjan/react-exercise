@@ -1,8 +1,9 @@
 import Login from "./Login";
 function App() {
-  const onLogin = (e, username, password, remember) => {
+  const onLogin = (e, username, password, remember, onReset) => {
     e.preventDefault();
     console.log(username, password, remember);
+    onReset();
   };
   return (
     <>
