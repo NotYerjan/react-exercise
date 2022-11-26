@@ -1,4 +1,5 @@
 import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 function App() {
   const onLogin = (e, username, password, remember, onReset) => {
     e.preventDefault();
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Login onLogin={onLogin} />
+      <UncontrolledLogin />
     </>
   );
 }
