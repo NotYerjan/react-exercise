@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
-export default function Login() {
+export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
+
   return (
     <div>
       <h1>Login</h1>
-      <form>
+      <form onSubmit={(e) => onLogin(e, username, password, remember)}>
         <label htmlFor="username">Username</label>
         <input
           id="username"
@@ -31,6 +32,9 @@ export default function Login() {
           onChange={(e) => setRemember(e.target.checked)}
         />
         <label htmlFor="remember">Remember me</label>
+        <button type="submit" disabled={username && password ? false : true}>
+          Login
+        </button>
       </form>
     </div>
   );
