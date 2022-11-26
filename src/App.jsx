@@ -1,8 +1,8 @@
-import ClickTracker from "./ClickTracker";
+import InteractiveWelcome from "./InteractiveWelcome";
 function App() {
   return (
     <>
-      <ClickTracker />
+      <InteractiveWelcome />
     </>
   );
 }
