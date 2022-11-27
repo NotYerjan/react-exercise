@@ -20,9 +20,25 @@ export default function TodoList() {
     todoRef.current.value = "";
   };
 
+  const removeFromTodoHandler = (item) => {
+    setItems((prevItems) => {
+      return prevItems.filter((todo) => todo !== item);
+    });
+  };
+
   return (
     <>
-      <ul>{items && items.map((item) => <li key={item}>{item}</li>)}</ul>
+      <ul>
+        {items &&
+          items.map((item) => (
+            <li key={item}>
+              {item}{" "}
+              <button onClick={() => removeFromTodoHandler(item)}>
+                Remove
+              </button>
+            </li>
+          ))}
+      </ul>
       <form onSubmit={formSubmitHandler}>
         <input type="text" ref={todoRef} />
         <button type="submit">Add</button>
