@@ -1,8 +1,9 @@
-import TodoList from "./TodoList";
+import Welcome from "./Welcome";
+
 function App() {
   return (
     <>
-      <TodoList />
+      <Welcome />
     </>
   );
 }
