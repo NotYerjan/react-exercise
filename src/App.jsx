@@ -4,7 +4,7 @@ import Container from "./Container";
 
 function App() {
   return (
-    <Container>
+    <Container title="Container">
       <Welcome />
       <Login />
     </Container>
