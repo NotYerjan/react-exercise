@@ -15,18 +15,19 @@ export default function TodoList() {
     todoRef.current.value = "";
   };
 
+  const resetHandler = () => {
+    setItems([]);
+    todoRef.current.value = "";
+  };
+
   return (
     <>
-      <ul>
-        {items &&
-          items.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-      </ul>
+      <ul>{items && items.map((item) => <li key={item}>{item}</li>)}</ul>
       <form onSubmit={formSubmitHandler}>
         <input type="text" ref={todoRef} />
         <button type="submit">Add</button>
       </form>
+      <button onClick={resetHandler}>Reset</button>
     </>
   );
 }
