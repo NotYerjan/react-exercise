@@ -1,21 +1,15 @@
-import TodoList from "./TodoList";
-function App() {
-  const renderTodoList = (items, callback) => {
-    return (
-      <ul>
-        {items &&
-          items.map((item) => (
-            <li key={item}>
-              {item} <button onClick={() => callback(item)}>Remove</button>
-            </li>
-          ))}
-      </ul>
-    );
-  };
+import DisplayLanguage from "./DisplayLanguage";
+import { createContext, useState } from "react";
 
+export const LanguageContext = createContext();
+
+function App() {
+  const [language, setLanguage] = useState("en");
   return (
     <>
-      <TodoList render={renderTodoList} />
+      <LanguageContext.Provider value={{ language, setLanguage }}>
+        <DisplayLanguage />
+      </LanguageContext.Provider>
     </>
   );
 }
