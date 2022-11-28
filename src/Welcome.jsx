@@ -1,16 +1,13 @@
-import React from "react";
 import PropTypes from "prop-types";
 import Age from "./Age";
 
-class Welcome extends React.Component {
-  render() {
-    return (
-      <>
-        <p>Welcome {this.props.name}</p>
-        <Age age={this.props.age} />
-      </>
-    );
-  }
+export default function Welcome({ name, age }) {
+  return (
+    <>
+      <p>Welcome {name}</p>
+      <Age age={age} />
+    </>
+  );
 }
 
 Welcome.defaultProps = {
@@ -22,5 +19,3 @@ Welcome.propTypes = {
   name: PropTypes.string,
   age: PropTypes.number,
 };
-
-export default Welcome;
