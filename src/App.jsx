@@ -8,6 +8,7 @@ function App() {
       <Welcome name={"Yerjan"} age={21} />
       <Welcome />
       <Sum numbers={numbers} />
+      <Sum />
     </>
   );
 }
