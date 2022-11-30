@@ -11,5 +11,5 @@ export default function GithubUser({ username }) {
 			});
 	}, [username]);
 
-	return <div>{data && data.name}</div>;
+	return <div>{data?.name}</div>;
 }

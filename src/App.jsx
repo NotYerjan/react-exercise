@@ -1,8 +1,8 @@
-import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 function App() {
 	return (
 		<>
-			<GithubUser username={"YerjanDesign"} />
+			<GithubUserList />
 		</>
 	);
 }
