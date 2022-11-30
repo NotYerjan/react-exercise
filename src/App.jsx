@@ -1,10 +1,10 @@
-import Counter from "./Counter";
+import GithubUser from "./GithubUser";
 function App() {
-  return (
-    <>
-      <Counter />
-    </>
-  );
+	return (
+		<>
+			<GithubUser username={"YerjanDesign"} />
+		</>
+	);
 }
 
 export default App;
