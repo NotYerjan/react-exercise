@@ -1,10 +1,5 @@
-import GithubUserList from "./GithubUserList";
 function App() {
-	return (
-		<>
-			<GithubUserList />
-		</>
-	);
+	return <></>;
 }
 
 export default App;
