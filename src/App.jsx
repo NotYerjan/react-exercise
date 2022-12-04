@@ -3,6 +3,7 @@ function App() {
 	return (
 		<>
 			<GithubUser username={"YerjanDesign"} />
+			<GithubUser username={"YerjanDesig"} />
 		</>
 	);
 }
