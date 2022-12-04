@@ -1,9 +1,11 @@
-import GithubUser from "./GithubUser";
+import CarDetails from "./CarDetails";
+
 function App() {
 	return (
 		<>
-			<GithubUser username={"YerjanDesign"} />
-			<GithubUser username={"YerjanDesig"} />
+			<CarDetails
+				initialData={{ model: "Renault", year: 2019, color: "#aaaaaa" }}
+			/>
 		</>
 	);
 }
