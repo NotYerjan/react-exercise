@@ -1,27 +1,13 @@
-import DisplayLanguage from "./DisplayLanguage";
-import Greeting from "./Greeting";
-
-import { createContext, useState } from "react";
-
-export const LanguageContext = createContext();
-
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./Welcome";
 function App() {
-  const [language, setLanguage] = useState("en");
-  const greetings = {
-    en: "Hello",
-    tr: "Merhaba",
-    ru: "Привет",
-    kz: "Сәлем",
-  };
-
-  return (
-    <>
-      <LanguageContext.Provider value={{ language, setLanguage, greetings }}>
-        <DisplayLanguage />
-        <Greeting />
-      </LanguageContext.Provider>
-    </>
-  );
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<Welcome name="Yerjan" />} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;
