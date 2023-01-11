@@ -7,9 +7,5 @@ export function useGithubUser(username) {
 		fetcher,
 	);
 
-	const onRefresh = () => {
-		mutate();
-	};
-
-	return { data, error, isLoading: !(data || error), onRefresh };
+	return { data, error, isLoading: !(data || error), onRefresh: mutate };
 }
